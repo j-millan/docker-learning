@@ -32,3 +32,8 @@ $ docker rm -f $(docker ps -aq)
 ```bash
 $ docker rmi $(docker images -q)
 ```
+
+### Override image ENTRYPOINT when running container
+```bash
+$ docker run --name my-image --entrypoint /bin/sh my-image:v1 -c "COMMAND HERE"
+```
