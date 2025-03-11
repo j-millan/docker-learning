@@ -1,5 +1,6 @@
 #### This project was made following [this course](https://www.udemy.com/course/docker-in-a-weekend-40-practical-demos-for-devops-learners/?srsltid=AfmBOoritFZZ9_0x6gHY1hwWs1rxj7URL9nf1RLa6OCZF5vEC_9z5U0s&couponCode=LETSLEARNNOW).
 
+[Difference between ENTRYPOINT and CMD instructions](https://stackoverflow.com/a/34245657).
 
 ## Command examples:
 
@@ -36,4 +37,9 @@ $ docker rmi $(docker images -q)
 ### Override image ENTRYPOINT when running container
 ```bash
 $ docker run --name my-image --entrypoint /bin/sh my-image:v1 -c "COMMAND HERE"
+```
+
+### Connect to docker container via shell using root user
+```bash
+$ docker exec --user root -it my-container /bin/sh
 ```
